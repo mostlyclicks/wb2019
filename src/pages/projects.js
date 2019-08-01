@@ -7,7 +7,22 @@ const ProjectsPage = () => (
   <Layout>
     <SEO title="Projects" />
     <h1>Projects Index</h1>
-    <p>This will be a listing of the all the Wieser Brothers projects by category</p>
+    <p>Wieser Brothers Projects overview paragraph</p>
+
+    <small><em>WORKING LIST based on current categories</em></small>
+    <ul>
+      <li>Cold Storage & Warehousing</li>
+      <li>Community & Worship</li>
+      <li>Educational</li>
+      <li>Financial</li>
+      <li>Food Processsing</li>
+      <li>Healthcare</li>
+      <li>Lodging & Multi-Dwelling</li>
+      <li>Manufacturing</li>
+      <li>Office Space</li>
+      <li>Restaurants</li>
+      <li>Retail</li>
+    </ul>
   </Layout>
 )
 
