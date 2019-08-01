@@ -23,3 +23,5 @@ const ProjectCategory = () => (
   </Layout>
 
 )
+
+export default ProjectCategory
