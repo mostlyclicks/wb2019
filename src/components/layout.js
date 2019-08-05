@@ -11,6 +11,7 @@ import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
 import Navigation from "./navigation"
+import FooterNav from "./footer"
 import "./layout.css"
 
 const Layout = ({ children }) => {
@@ -37,6 +38,7 @@ const Layout = ({ children }) => {
       >
         <Navigation />
         <main>{children}</main>
+        <FooterNav />
         <footer>
           © {new Date().getFullYear()}, Wieser Brothers General Contractor, Inc.
         </footer>

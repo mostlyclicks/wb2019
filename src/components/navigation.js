@@ -3,6 +3,7 @@ import { Link } from "gatsby"
 
 const Navigation = () => (
   <div>
+    <h2>Navigation Placeholder</h2>
     <h3>Project pages</h3>
     <ul>
       <li><Link to="/projects/">Projects</Link></li>
