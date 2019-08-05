@@ -15,6 +15,11 @@ const Navigation = () => (
       <li><Link to="/news/">News</Link></li>
       <li><Link to="/news-article/">News Article</Link></li>
     </ul>
+
+    <h3>Contact</h3>
+    <ul>
+      <li><Link to="/contact/">Contact Us</Link></li>
+    </ul>
   </div>
 )
 
