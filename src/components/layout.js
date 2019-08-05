@@ -34,6 +34,7 @@ const Layout = ({ children }) => {
           paddingTop: 0,
         }}
       >
+        <h3>NAVIGATION GOES HERE</h3>
         <main>{children}</main>
         <footer>
           © {new Date().getFullYear()}, Wieser Brothers General Contractor, Inc.

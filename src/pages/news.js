@@ -1,7 +1,6 @@
 import React from "react"
 
 import Layout from "../components/layout"
-
 import SEO from "../components/seo"
 
 const NewsIndex = () => (
@@ -14,3 +13,7 @@ const NewsIndex = () => (
 )
 
 export default NewsIndex
+
+//use filter to show types of articles
+//create tag field
+
