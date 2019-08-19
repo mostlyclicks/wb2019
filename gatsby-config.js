@@ -34,6 +34,25 @@ module.exports = {
         spaceId: `6iwqaagnp0yo`,
         accessToken: `B7pU2_aB4CM_ABdL5xR0K65uMNzWCHCJL-Gls36sm0s`
       }
+    },
+    {
+      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      options: {
+        fonts: [
+          {
+            family: `Muli`,
+            variants: [`700`, `900`]
+          },
+          {
+            family: `Open Sans`,
+            variants: [`400`, `700`]
+          },
+          {
+            family: `IBM Plex Serif`,
+            variants: [`400`, '700']
+          },
+        ],
+      },
     }
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
