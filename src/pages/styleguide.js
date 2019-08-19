@@ -10,7 +10,8 @@ const Container = styled.div`
   margin:1rem auto;
   width:960px;
   h1, h2, h3, h4 {font-family:'Muli';font-weight:900;margin-top:2rem;color:rgba(0,0,0,.65);}
-  p, li {font-family:'Open Sans';font-weight:4 00;color:rgba(0,0,0,.58)}
+  p, li {font-family:'Open Sans';font-weight:4 00;color:rgba(0,0,0,.60)}
+  a {color:#fe9314;}
   
   blockquote::before {
     content:"“";
@@ -55,18 +56,10 @@ const SectionTitleStyle = styled.div`
 `
 const PlaceholderText = (props) => (
   <div>
-    <p>Wieser Brothers General Contractor, Inc. is a family-owned and operated firm based in La Crescent, MN. Founded in 1994 by Jeff and Brian Wieser, the company has grown into a full-service, integrated 130 plus person team that includes journeyman carpenters, certified concrete finishers, trained steel erectors, skilled field superintendents and professional project managers, all dedicated to delivering quality construction services. Wieser Brothers is the leader in design/build services, partnering closely with clients to meet current and future building needs with intelligence and efficiency. TRUST is the cornerstone of any Wieser Brothers project. Over 60% of annual sales are in repeat business from satisfied customers.</p>
+    <p>Wieser Brothers General Contractor, Inc. is a family-owned and operated firm based in La Crescent, MN. Founded in 1994 by Jeff and Brian Wieser, the company has grown into a full-service, integrated 130 plus person team that includes journeyman carpenters, certified concrete finishers, trained steel erectors, skilled field superintendents and professional project managers, all dedicated to delivering quality construction services. Wieser Brothers is the leader in design/build services, partnering closely with clients to meet current and future building needs with intelligence and efficiency. TRUST is the cornerstone of any <Link to="#">Wieser Brothers</Link> project. Over 60% of annual sales are in repeat business from satisfied customers.</p>
   </div>
 )
 
-const BlockQuotePartial = () => (
-  <div>
-    <BlockquoteStyled>
-      <p>“Their approach to design/build is the main reason we started working with Wieser Brothers. They are better prepared, better staffed, they listen, they respond, and they pay attention to details. Our projects move forward at a better rate. What you see each time is quality.”
-        Rudy Rott, Vice President of Operations | Main Street Ingredients</p>
-    </BlockquoteStyled>
-  </div>
-)
 
 const TwoColumn = styled.div`
   display:grid;
@@ -90,7 +83,7 @@ const ColorBar = styled.div`
   .green {background-color:#bccfc9;}
   .dark-green {background-color:#00573c;}
   .black-2 {background-color:rgba(0,0,0,.65);}
-  .black-1 {background-color:rgba(0,0,0,.58);}
+  .black-1 {background-color:rgba(0,0,0,.60);}
   .orange {background-color:#fe9314;}
 `
 
@@ -104,7 +97,7 @@ const ColorGrid = styled.div`
   .green {background-color:#bccfc9;}
   .dark-green {background-color:#00573c;}
   .black-2 {background-color:rgba(0,0,0,.65);}
-  .black-1 {background-color:rgba(0,0,0,.58);}
+  .black-1 {background-color:rgba(0,0,0,.60);}
   .orange {background-color:#fe9314;}
   .txt {padding:1rem;}
   .light p {color:#ffffff;}
@@ -137,7 +130,7 @@ const Colors = () => (
       <div class="green dark"><p class="txt">WB Green Light, #bccfc9</p></div>
       <div class="dark-green light"><p class="txt">WB Green Light, #00573c</p></div>
       <div class="black-1 light"><p class="txt">Black, 65% alpha</p></div>
-      <div class="black-2 light"><p class="txt">Black, 58% alpha</p></div>
+      <div class="black-2 light"><p class="txt">Black, 60% alpha</p></div>
       <div class="orange dark"><p class="txt">Orange, #fe9314</p></div>
     </ColorGrid>
   </section>
