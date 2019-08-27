@@ -1,7 +1,30 @@
-/**
- * Implement Gatsby's Node APIs in this file.
- *
- * See: https://www.gatsbyjs.org/docs/node-apis/
- */
+const path = require(`path`);
 
-// You can delete this file if you're not using it
+exports.createPages = ({ graphql, actions }) => {
+  const { createPage } = actions;
+  const empOpsTemplate = path.resolve(`src/templates/empOps.js`)
+  return graphql(`
+    {
+      allContentfulEmploymentOpportunities {
+        edges {
+          node {
+            slug
+          }
+        }
+      }
+    }
+  `).then(result => {
+    if (result.errors) {
+      throw result.errors
+    }
+    result.data.allContentfulEmploymentOpportunities.edges.forEach(edge => {
+      createPage({
+        path: `/employment-opportunities/${edge.node.slug}`,
+        component: empOpsTemplate,
+        context: {
+          slug: edge.node.slug,
+        },
+      })
+    })
+  })
+}
