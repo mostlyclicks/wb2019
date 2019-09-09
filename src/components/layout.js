@@ -13,6 +13,7 @@ import Header from "./header"
 import Navigation from "./navigation"
 import FooterNav from "./footer"
 import "./layout.css"
+import "./base-styles.css"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`

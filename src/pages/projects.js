@@ -9,26 +9,11 @@ const ProjectsPage = ({data: { allContentfulProjectCategories }}) => (
     <h1>Projects Index</h1>
     <p>Wieser Brothers Projects overview paragraph</p>
 
-    <h3>From Contentful TEST</h3>
+    <h3>Categories from Contentful API</h3>
     <ul>
       {allContentfulProjectCategories.edges.map(({ node }) => (
         <li>{node.title} {node.slug}</li>
       ))}
-    </ul>
-    
-    <small><em>WORKING LIST based on current categories</em></small>
-    <ul>
-      <li>Cold Storage & Warehousing</li>
-      <li>Community & Worship</li>
-      <li>Educational</li>
-      <li>Financial</li>
-      <li>Food Processsing</li>
-      <li>Healthcare</li>
-      <li>Lodging & Multi-Dwelling</li>
-      <li>Manufacturing</li>
-      <li>Office Space</li>
-      <li>Restaurants</li>
-      <li>Retail</li>
     </ul>
   </Layout>
 )
@@ -44,5 +29,4 @@ export const query = graphql`
   }
 }
 `
-
 export default ProjectsPage

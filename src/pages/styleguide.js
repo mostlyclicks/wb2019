@@ -102,15 +102,13 @@ const ColorGrid = styled.div`
   .txt {padding:1rem;}
   .light p {color:#ffffff;}
 `
-
+/*
 const BlockquoteStyled = styled.blockquote`
   background-color:#bccfc9;
   padding:40px;
   background-position:100px 100px;
-  
-
-  
 `
+*/
 
 const Colors = () => (
   <section>

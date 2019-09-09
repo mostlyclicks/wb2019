@@ -2,13 +2,13 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import Layout from '../components/layout'
 
-function EmploymentOpportunity({ data }) {
-  return (
+const EmploymentOpportunity = ({ data }) => (
+  
     <Layout>
-      <h2>{data.contentfulEmploymentOpportunities.title} Yo</h2>
+      <h2>{data.contentfulEmploymentOpportunities.title} </h2>
     </Layout>
-  )
-}
+  
+)
 
 export const query = graphql`
   query employmentOpportunity($slug: String!) {
