@@ -126,7 +126,7 @@ const Colors = () => (
     <ColorGrid>
       <div class="main dark"><p class="txt">Black, 3% alpha</p></div>
       <div class="green dark"><p class="txt">WB Green Light, #bccfc9</p></div>
-      <div class="dark-green light"><p class="txt">WB Green Light, #00573c</p></div>
+      <div class="dark-green light"><p class="txt">WB Green, #00573c</p></div>
       <div class="black-1 light"><p class="txt">Black, 65% alpha</p></div>
       <div class="black-2 light"><p class="txt">Black, 60% alpha</p></div>
       <div class="orange dark"><p class="txt">Orange, #fe9314</p></div>

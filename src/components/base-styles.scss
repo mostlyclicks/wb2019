@@ -1,0 +1,33 @@
+//colors
+$header-gray: rgba(0,0,0,.65);
+$light-gray:rgba(0,0,0,.03);
+$gray:rgba(0,0,0,.60);
+$wb-green:#00573c;
+$wb-green-light:#bccfc9;
+$orange:#fe9314;
+
+//fonts
+h1, h2, h3, h4 {
+  font-family:'Muli';
+  color: $header-gray;
+  font-weight:900;
+  margin-top:2rem;
+}
+
+body, p, ul, li {
+  font-family:'Open Sans';
+  color: $gray;
+}
+
+blockquote {
+  font-family:'IBM Plex Serif';
+}
+
+//base styles
+a {
+  color:darken($wb-green, .8);
+  &:hover {
+    color:$wb-green-light;
+  }
+}
+

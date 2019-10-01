@@ -1,27 +1,48 @@
 import React from "react"
 import { Link } from "gatsby"
+import styled from "styled-components"
+import "./base-styles.scss"
+
+const StyledNavigation = styled.div`
+  width: 900px;
+  position:relative;
+  margin-top:-70px;
+  margin-left:-600px;
+  background-color: gray;
+  padding: 20px;
+  text-align: right;
+  font-weight: 700;
+
+  ul,
+  li {
+    color: #ffffff;
+    display: block;
+    margin: 0;
+    padding: 0;
+  }
+  li {
+    display: block;
+  }
+  a {color:#ffffff;}
+`
 
 const Navigation = () => (
-  <div>
-    <h2>Navigation Placeholder</h2>
-    <h3>Project pages</h3>
+  <StyledNavigation>
     <ul>
-      <li><Link to="/projects/">Projects</Link></li>
-      <li><Link to="/project-category/">Project Category</Link></li>
-      <li><Link to="/project/">Project</Link></li>
+      <li>
+        <Link to="/">Home</Link>
+      </li>
+      <li>
+        <Link to="/">Our Firm</Link>
+      </li>
+      <li>Our Services</li>
+      <li>Our Commitment</li>
+      <li>Our Projects</li>
+      <li>News</li>
+      <li>Plan Room</li>
+      <li>Events</li>
     </ul>
-
-    <h3>News pages</h3>
-    <ul>
-      <li><Link to="/news/">News</Link></li>
-      <li><Link to="/news-article/">News Article</Link></li>
-    </ul>
-
-    <h3>Contact</h3>
-    <ul>
-      <li><Link to="/contact/">Contact Us</Link></li>
-    </ul>
-  </div>
+  </StyledNavigation>
 )
 
 export default Navigation
