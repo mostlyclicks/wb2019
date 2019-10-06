@@ -4,6 +4,7 @@ import styled from "styled-components"
 import "./base-styles.scss"
 
 const StyledNavigation = styled.div`
+  display:none;
   width: 900px;
   position:relative;
   margin-top:-70px;
