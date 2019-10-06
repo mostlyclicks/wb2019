@@ -4,88 +4,78 @@ import React from "react"
 import styled from "styled-components"
 import logo from "../images/logo.png"
 import './base-styles.scss'
+import { screen } from './media-queries';
 
-
-const HeaderLink = styled(props => <Link {...props} />)`
-  display:hidden;
-  color:$wb-green;
-  @media (max-width: 768px) {
-    font-size:1rem;
-`
-const TopNav = styled(props => <Link {...props} />)`
-  ul {
-    display: block;
-    margin: 40px 0;
-    padding: 0;
-    float: right;
-    width:50%;
-    @media all and (max-width:991px) {
-      width:100%;
-      margin:0px auto;
-      border:1px solid $wb-green;
-      .secondary {
-        display:none;
-      }
-    }
-  }
-
-  li {
-    text-styles: none;
-    display: block;
-    float: left;
-    font-size: 14px;
-    padding:0px 7px;
-    @media screen and (max-width:761px;) {
-      font-size: 11px;
-      border:1px solid blue;
-    }
-  }
+const TestDiv = styled.div`
+  height: 0px;
+  background-color: #cdcdcd;
+  ${screen.phone`
+    background-color:orange;
+  `};
+  ${screen.tablet`
+    background-color:pink;
+  `};
+  ${screen.desktopSmall`
+    background-color:crimson;
+  `};
+  ${screen.desktopLarge`
+    background-color:blue;
+  `};
 `
 
-const HeaderWrapper = styled.div`
-  background-color: #fff;
-  border:1px solid red;
-  width:1200px;
-  margin:0 auto;
-  h1 {
-    display:none;
-  }
-  img {
-    display:block;
-    margin-top:20px;
-    float:left;
-    width:200px;
-    @media all and (max-width:761px;) {
-      float:none;
-      margin:0 auto;
-      border:1px solid green;
-    }
-  }
-  height: 225px;
-
-  @media all and (max-width: 768px) {
-    height: 70px;
-  }
-  @media all and (max-width: 991px) {
-    height: 100px;
-    width:100%;
-  }
-
-  @media all and (max-width: 1199px) {
-    width:100%;
-  }
-`
 const Logo = () => <img src={logo} alt="Wieser Brothers Inc. Logo" />
 
-const Header = ({ siteTitle }) => (
-  <HeaderWrapper>
-    <Logo />
-    <h1 style={{ margin: 0 }}>
-      <HeaderLink to="/">{siteTitle}</HeaderLink>
-    </h1>
+const HeaderWrapper = styled.section`
+  width:100%;
+  img {
+    display:block;
+    width:150px;
+    padding:10px;
+    margin:0 auto;
+  };
 
-    <TopNav>
-      <ul>
+  ${screen.tablet`
+    img {margin:0 0;width:200px;padding:15px;}
+  `};
+  ${screen.desktopSmall`
+    max-width:991px;
+    border:1px solid blue;
+    margin:0 auto;
+  `};
+  ${screen.desktopLarge`
+    max-width:1199px;
+  `}
+`
+
+const TopNav = styled.ul`
+  position:absolute;
+  top:5px;
+  left:0;
+  height:10px;
+  display: block;
+
+  font-size:12px;
+  border:1px solid red;
+  li {
+    display: block;
+    float:left;
+    padding: 0px;
+  }
+  .secondary {
+    display: none;
+  }
+
+  ${screen.desktopSmall`
+    .secondary {display:block;}
+  `}
+`
+
+const Header = ({ siteTitle }) => (
+  <div>
+    <TestDiv />
+    <HeaderWrapper>
+      <Logo />
+      <TopNav>
         <li className="primary">
           <Link to="/">507-895-8903</Link>
         </li>
@@ -104,9 +94,9 @@ const Header = ({ siteTitle }) => (
         <li className="secondary">
           <a href="/">MSDS</a>
         </li>
-      </ul>
-    </TopNav>
-  </HeaderWrapper>
+      </TopNav>
+    </HeaderWrapper>
+  </div>
 )
 
 Header.propTypes = {
@@ -118,3 +108,6 @@ Header.defaultProps = {
 }
 
 export default Header
+
+
+
