@@ -23,13 +23,15 @@ const Layout = ({ children, path }) => {
   return (
     <>
       <Header siteTitle={data.site.siteMetadata.title} />
-        <Navigation />
+      {/*} 
+      <Navigation />
           <main>{children}</main>
         <FooterNav />
 
         <footer>
           © {new Date().getFullYear()}, Wieser Brothers General Contractor, Inc.
         </footer>
+      */}
     </>
   )
 }
