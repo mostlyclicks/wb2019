@@ -1,11 +1,15 @@
-import React from 'react'
-import { Link } from 'gatsby'
-import styled from "styled-components"
+import React from 'react';
+import { Link } from 'gatsby';
+import styled from "styled-components";
 import { screen } from './media-queries';
+import './base-styles.scss'
 
+
+// const lightGray = 'rgba(0,0,0,.03)';
+// const gray = 'rgba(0,0,0,.60)';
 
 const StyledNav = styled.nav`
-  background:#333;
+  background:rgba(0,0,0,.03);
   height:46px;
   ul {
     list-style-type:none;
@@ -16,7 +20,7 @@ const StyledNav = styled.nav`
   }
   a {
     text-decoration:none;
-    color:#cdcdcd;
+    color:rgba(0,0,0,.60);
     display:block;
     padding:10px 15px;
     font-size:14px;
@@ -24,7 +28,7 @@ const StyledNav = styled.nav`
   a:hover {
     color:#fff;
     transition:0.7s;
-    background-color:#000;
+    background-color:#00573c;
   }
   .secondary {
     display:none;
@@ -33,21 +37,33 @@ const StyledNav = styled.nav`
   ${screen.tablet`
     ul {
       display:flex;
-      justify-content:flex-end;
+      justify-content:center;
+    }
+    span {
+      display:flex;
+      justify-content:flex-start;
     }
     .secondary {
       display:block;
     }
   `}
-
-
 `
 
 const TopNav = () => {
   return (
     <StyledNav>
       <ul>
-        <li><Link to="/">507-895-8903</Link></li>
+        <span className="open-slide">
+          <a href="#" onclick="openSideMenu()">
+            <svg width="30" height="30">
+              <path d="M0,5 30,5" stroke="#fff" stroke-width="5" />
+              <path d="M0,14 30,14" stroke="#fff" stroke-width="5" />
+              <path d="M0,23 30,23" stroke="#fff" stroke-width="5" />
+            </svg>
+          </a>
+        </span>
+        
+        <li><a href="tel:507-895-8903">507-895-8903</a></li>
         <li><Link to="/">Contact Us</Link></li>
         <li><Link to="/">Employment Opportunites</Link></li>
         <li><Link to="/" className="secondary">Submit Bids</Link></li>

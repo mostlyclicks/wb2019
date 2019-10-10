@@ -4,7 +4,7 @@ import React from "react"
 import styled from "styled-components"
 import logo from "../images/logo.png"
 import TopNav from './topnav'
-import './base-styles.scss'
+// import { BaseStyle } from './base-styles'
 import { screen } from './media-queries';
 
 
@@ -29,14 +29,14 @@ const Logo = () => <img src={logo} alt="Wieser Brothers Inc. Logo" />
 
 const HeaderWrapper = styled.section`
   display:block;
-  border: 1px solid blue;
+  
   margin:0 auto;
   margin-top: 0px;
   width: 100%;
   img {
     display: block;
-    width: 150px;
-    padding: 10px;
+    width: 225px;
+    padding: 20px;
     margin: 0 auto;
   }
 
@@ -53,17 +53,13 @@ const HeaderWrapper = styled.section`
   `}
 `
 
-
-
 const Header = ({ siteTitle }) => (
   <div>
     {/*<TestDiv />*/}
     <TopNav />
-    
     <HeaderWrapper>
       <Logo />
     </HeaderWrapper>
-    
   </div>
 )
 
@@ -76,6 +72,3 @@ Header.defaultProps = {
 }
 
 export default Header
-
-
-

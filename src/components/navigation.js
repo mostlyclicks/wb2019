@@ -1,7 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
 import styled from "styled-components"
-import "./base-styles.scss"
+import "./base-styles"
 
 const StyledNavigation = styled.div`
   display:none;

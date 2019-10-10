@@ -2,12 +2,12 @@ import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import { Link } from '@reach/router';
-
 import Header from "./header"
-import Navigation from "./navigation"
+import MainNavigation from "./MainNavigation"
+// import Navigation from "./navigation"
 import FooterNav from "./footer"
 import "./layout.css"
-import "./base-styles.scss"
+import { BaseStyle } from "./base-styles"
 
 const Layout = ({ children, path }) => {
   const data = useStaticQuery(graphql`
@@ -23,9 +23,18 @@ const Layout = ({ children, path }) => {
   return (
     <>
       <Header siteTitle={data.site.siteMetadata.title} />
-      {/*} 
+
+      {/* MAIN NAV PLACEHOLDER */}
+      <MainNavigation />
+
+      {/* HERO */}
+
+      {/* PROJECT HERO in index.js */}
+      <main>{children}</main>
+      {/*}
+       
       <Navigation />
-          <main>{children}</main>
+          
         <FooterNav />
 
         <footer>
