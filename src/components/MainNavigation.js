@@ -9,7 +9,8 @@ import { screen } from './media-queries';
 const NavWrapper = styled.section`
   display:flex;
   flex-direction:row;
-  align-items:flex-end;
+  justify-content:flex-end;
+  align-content:center;
   
   width:100%;
   #side-menu {
@@ -30,15 +31,17 @@ const NavWrapper = styled.section`
 
 const NavBar = styled.nav`
   display:flex;
-  align-items:flex-start;
+  
   ul {
     display:flex;
     flex-direction:row;
+    
     list-style:none;
     margin:0;
     padding:0;
     text-align:right;
     margin-bottom:50px;
+    border:1px solid green;
   }
   li {
     margin:0;
