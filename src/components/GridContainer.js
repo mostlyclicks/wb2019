@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import { Link } from 'gatsby'
 import { screen } from "./media-queries"
 
 
@@ -20,17 +21,41 @@ const GridContainerWrapper = styled.div`
 const GridItem = styled.div`
   background-color: rgba(0, 0, 0, 0.25);
   height: 400px;
-  :nth-child(1) {order: 1;}
-  :nth-child(2) {order: 2;}
-  :nth-child(3) {order: 4;}
-  :nth-child(4) {order: 3;}
-  :nth-child(5) {order: 5;}
-  :nth-child(6) {order: 6;}
-
-  :nth-child(2),
-  :nth-child(3),
+  display: block;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.03);
+  :nth-child(1) {
+    order: 1;
+    background-image: url("https://picsum.photos/800");
+  }
+  :nth-child(2) {
+    order: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  :nth-child(3) {
+    order: 4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  :nth-child(4) {
+    order: 3;
+    background-image: url("https://picsum.photos/800");
+  }
+  :nth-child(5) {
+    order: 5;
+    background-image: url("https://picsum.photos/800");
+  }
   :nth-child(6) {
-    background-color: blue;
+    order: 6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
 
   ${screen.tablet`
@@ -47,6 +72,30 @@ const GridItem = styled.div`
     height:400px;
   `}
 `
+const GridBox = styled.div`
+  width: 250px;
+  height: 250px;
+  overflow: hidden;
+  h1 {
+    font-size: 36px;
+    line-height: 2.45rem;
+    margin-top: 1rem;
+    font-family: "IBM Plex Serif";
+  }
+  a {
+    color: #fe9314;
+    text-transform:uppercase;
+    font-size:18px;
+    font-weight:bold;
+    text-decoration:none;
+    font-family:'Open Sans';
+    transition:.5s;
+    :hover {
+      color:black;
+    }
+  }
+`
+
 
 
 
@@ -54,11 +103,35 @@ const GridContainer = () => {
   return (
     <GridContainerWrapper>
       <GridItem>One</GridItem>
-      <GridItem>Two</GridItem>
-      <GridItem>Three</GridItem>
+
+      <GridItem>
+        <GridBox>
+          <h1>Trust<br />
+          Partnership<br />
+          Excellence</h1>
+      
+          <Link to="/">Learn more</Link>
+      
+        </GridBox>
+      </GridItem>
+
+      <GridItem>
+        <GridBox>
+          <h1>News</h1>
+          <p>New ABC Company Expansions</p>
+          <Link to="/">Read more</Link>
+        </GridBox>
+      </GridItem>
+
       <GridItem>Four</GridItem>
       <GridItem>Five</GridItem>
-      <GridItem>Six</GridItem>
+      <GridItem>
+        <GridBox>
+          <h1>Employment Opportunities</h1>
+          <p>See all of our job opportunities</p>
+          <Link to="/">Start here</Link>
+        </GridBox>
+      </GridItem>
     </GridContainerWrapper>
   )
 }

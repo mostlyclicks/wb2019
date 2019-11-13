@@ -15,6 +15,7 @@ const IndexPage = () => (
     <div>
       <ProjectHero />
       <GridContainer />
+      
 
 
     </div>

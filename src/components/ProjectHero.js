@@ -1,35 +1,46 @@
 import React from 'react'
 import styled from 'styled-components'
+import { screen } from './media-queries';
+import projectHero from '../images/1OV.jpg';
 
 const StyledProjectHero = styled.div`
-  display:block;
-  width:100%;
-  height:30vh;
-  background-image:url("https://picsum.photos/id/1025/1200/600");
-  background-size:cover;
-  background-position:center;
-  display:flex;
+  display: flex;
+  width: 100%;
+  height:400px;
+  background-image: url(${projectHero});
+  background-size: cover;
+  background-position: center;
+  
   .center-content {
-    width:400px;
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    margin:auto;
-    font-family:Muli, sans-serif;
-    color:#fff;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    font-family: Muli, sans-serif;
+    color: #fff;
+    margin: auto;
   }
-`;
+
+  ${screen.tablet`
+    height:400px;
+  `}
+  ${screen.desktopSmall`
+    width:991px;
+    align-items:center;
+    justify-content:center;
+  `}
+  ${screen.desktopLarge`
+    width:1199px;
+  `}
+`
 
 
 const ProjectHero = () => {
   return (
     <div>
       <StyledProjectHero>
-        
         <div className="center-content">
           <caption>Organic Valley Headquarters<br />Cashton, WI</caption>
         </div>
-        
       </StyledProjectHero>
     </div>
   )
