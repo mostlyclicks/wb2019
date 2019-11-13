@@ -8,7 +8,9 @@ import { screen } from './media-queries';
 
 const NavWrapper = styled.section`
   display:flex;
-  display-direction:row;
+  flex-direction:row;
+  align-items:flex-end;
+  
   width:100%;
   #side-menu {
     display:none;
@@ -30,12 +32,12 @@ const NavBar = styled.nav`
   display:flex;
   align-items:flex-start;
   ul {
-    display:block;
+    display:flex;
+    flex-direction:row;
     list-style:none;
     margin:0;
     padding:0;
     text-align:right;
-    width:225px;
     margin-bottom:50px;
   }
   li {
