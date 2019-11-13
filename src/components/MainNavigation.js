@@ -10,8 +10,8 @@ const NavWrapper = styled.section`
   display:flex;
   flex-direction:row;
   justify-content:flex-end;
-  align-content:center;
-  
+  border:1px solid red;
+  align-items:center;
   width:100%;
   #side-menu {
     display:none;
@@ -31,7 +31,7 @@ const NavWrapper = styled.section`
 
 const NavBar = styled.nav`
   display:flex;
-  
+  align-items:center;
   ul {
     display:flex;
     flex-direction:row;
@@ -40,7 +40,7 @@ const NavBar = styled.nav`
     margin:0;
     padding:0;
     text-align:right;
-    margin-bottom:50px;
+
     border:1px solid green;
   }
   li {
