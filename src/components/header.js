@@ -4,6 +4,7 @@ import React from "react"
 import styled from "styled-components"
 import logo from "../images/logo.png"
 import TopNav from './topnav'
+import MainNavigation from './MainNavigation';
 // import { BaseStyle } from './base-styles'
 import { screen } from './media-queries';
 
@@ -59,6 +60,7 @@ const Header = ({ siteTitle }) => (
     <TopNav />
     <HeaderWrapper>
       <Logo />
+      <MainNavigation />
     </HeaderWrapper>
   </div>
 )

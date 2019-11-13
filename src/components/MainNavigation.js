@@ -2,7 +2,9 @@ import React from 'react'
 import styled from 'styled-components'
 import { Link } from 'gatsby'
 import { screen } from './media-queries';
-import heroImage from '../images/hero_8918.jpg'
+// import { Link } from '@reach/router';
+
+// import heroImage from '../images/hero_8918.jpg'
 
 const NavWrapper = styled.section`
   display:flex;
@@ -58,7 +60,7 @@ const NavBar = styled.nav`
 
 `;
 
-const HeroImage = () => <img src={heroImage} alt="WB Hero Image" />
+// const HeroImage = () => <img src={heroImage} alt="WB Hero Image" />
 
 const MainNavigation = () => {
   return (
@@ -75,7 +77,7 @@ const MainNavigation = () => {
           <li><Link to="/">Plan Room</Link></li>
           <li><Link to="/">Events</Link></li>
         </ul>
-        <HeroImage />
+        
       </NavBar>
 
       <div id="side-menu">

@@ -53,16 +53,6 @@ const TopNav = () => {
   return (
     <StyledNav>
       <ul>
-        <span className="open-slide">
-          <a href="#" onclick="openSideMenu()">
-            <svg width="30" height="30">
-              <path d="M0,5 30,5" stroke="#fff" stroke-width="5" />
-              <path d="M0,14 30,14" stroke="#fff" stroke-width="5" />
-              <path d="M0,23 30,23" stroke="#fff" stroke-width="5" />
-            </svg>
-          </a>
-        </span>
-        
         <li><a href="tel:507-895-8903">507-895-8903</a></li>
         <li><Link to="/">Contact Us</Link></li>
         <li><Link to="/">Employment Opportunites</Link></li>
