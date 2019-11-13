@@ -4,7 +4,7 @@ import { Link } from 'gatsby'
 import { screen } from './media-queries';
 // import { Link } from '@reach/router';
 
-// import heroImage from '../images/hero_8918.jpg'
+
 
 const NavWrapper = styled.section`
   display:flex;
@@ -35,23 +35,18 @@ const NavBar = styled.nav`
   ul {
     display:flex;
     flex-direction:row;
-    
     list-style:none;
     margin:0;
     padding:0;
-    text-align:right;
-
-    border:1px solid green;
   }
   li {
     margin:0;
-    letter-spacing:1.2px;
+    font-size:14px;
   }
   a {
-    display:block;  
-    padding:7px 30px;
+    display:block;
+    padding:7px 10px;
     margin:0;
-    padding:5px;
     font-family:'Muli' sans-serif;
     font-weight:900;
     text-transform:uppercase;
@@ -97,7 +92,6 @@ const MainNavigation = () => {
       </div>
 
     </NavWrapper>
-    
   )
 };
 
