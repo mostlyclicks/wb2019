@@ -3,8 +3,16 @@ import styled from 'styled-components'
 import { screen } from './media-queries';
 import projectHero from '../images/1OV.jpg';
 
+const Wrapper = styled.div`
+  display: flex;
+  flex-direction:row;
+  justify-content:center;
+  margin-top:15px;
+`
 const StyledProjectHero = styled.div`
   display: flex;
+  border:1px solid red;
+  justify-content:center;
   width: 100%;
   height:400px;
   background-image: url(${projectHero});
@@ -25,24 +33,24 @@ const StyledProjectHero = styled.div`
   `}
   ${screen.desktopSmall`
     width:991px;
+    height:500px;
     align-items:center;
     justify-content:center;
   `}
   ${screen.desktopLarge`
     width:1199px;
+    height:600px;
   `}
 `
-
-
 const ProjectHero = () => {
   return (
-    <div>
+    <Wrapper>
       <StyledProjectHero>
         <div className="center-content">
           <caption>Organic Valley Headquarters<br />Cashton, WI</caption>
         </div>
       </StyledProjectHero>
-    </div>
+    </Wrapper>
   )
 }
 

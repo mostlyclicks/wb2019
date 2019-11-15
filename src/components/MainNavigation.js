@@ -10,7 +10,6 @@ const NavWrapper = styled.section`
   display:flex;
   flex-direction:row;
   justify-content:flex-end;
-  border:1px solid red;
   align-items:center;
   width:100%;
   #side-menu {

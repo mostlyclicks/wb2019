@@ -47,7 +47,6 @@ const HeaderWrapper = styled.section`
   `};
   ${screen.desktopSmall`
     max-width:991px;
-    border:1px solid blue;
     margin:0 auto;
   `};
   ${screen.desktopLarge`
