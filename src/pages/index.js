@@ -10,6 +10,8 @@ import GridContainer from "../components/GridContainer"
 
 
 const IndexPage = () => (
+
+
   <Layout>
     <SEO title="Home" />
     <div>

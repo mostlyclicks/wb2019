@@ -7,7 +7,7 @@ import { screen } from './media-queries';
 
 
 const NavWrapper = styled.section`
-  display:flex;
+  display:none;
   flex-direction:row;
   justify-content:flex-end;
   align-items:center;
@@ -15,22 +15,32 @@ const NavWrapper = styled.section`
   #side-menu {
     display:none;
   }
+
+  ${screen.phone`
+    display:none;
+    align-items:center;
+  `}
+
+  ${screen.tablet`
+    display:flex;
+    
+  `}
   
   ${screen.desktopSmall`
     margin:0 auto;
+    display:flex;
   `}
 
   ${screen.desktopLarge`
     margin:0 auto;
     max-width:1199px;
   `}
-
-
 `
 
 const NavBar = styled.nav`
   display:flex;
   align-items:center;
+       border:1px solid blue;
   ul {
     display:flex;
     flex-direction:row;
@@ -44,7 +54,7 @@ const NavBar = styled.nav`
   }
   a {
     display:block;
-    padding:7px 10px;
+    padding:7px 8px;
     margin:0;
     font-family:'Muli' sans-serif;
     font-weight:900;
@@ -57,15 +67,48 @@ const NavBar = styled.nav`
     }
   }
 
-`;
+   ${screen.tablet`
+      li {font-size:10px;}
+           border:1px solid red;
+  `}
 
-// const HeroImage = () => <img src={heroImage} alt="WB Hero Image" />
+  ${screen.desktopSmall`
+      li {font-size:14px;}
+      border:1px solid green;
+  `}
 
-const MainNavigation = () => {
+`
+
+const Hamburger = styled.span`
+  display:none;
+`
+
+// const MainNavigation = () => {
+class MainNavigation extends React.Component {
+
+  toggleMenu() {
+    console.log("buttonClicked")
+  }
+  
+  render() {
+
   return (
     
     <NavWrapper>
       <NavBar>
+        <div>
+
+        </div>
+        <Hamburger>
+          <a href="#" onClick={this.toggleMenu}>
+            <svg width="30" height="30">
+              <path d="M0,5 30,5" stroke="rgba(0,0,0,.4" stroke-width="5" />
+              <path d="M0,14 30,14" stroke="rgba(0,0,0,.4" stroke-width="5" />
+              <path d="M0,23 30,23" stroke="rgba(0,0,0,.4" stroke-width="5" />
+            </svg>
+          </a>
+        </Hamburger>
+
         <ul>
           <li><Link to="/">Home</Link></li>
           <li><Link to="/">Our Firm</Link></li>
@@ -76,10 +119,10 @@ const MainNavigation = () => {
           <li><Link to="/">Plan Room</Link></li>
           <li><Link to="/">Events</Link></li>
         </ul>
-        
       </NavBar>
 
-      <div id="side-menu">
+      <div id="side-menu" class="side-nav">
+        <a href="#" class="btn-close" onclick="closeSideMenu">&times;</a>
         <Link to="/">Home</Link>
         <Link to="/">Our Firm</Link>
         <Link to="/">Our Services</Link>
@@ -92,6 +135,7 @@ const MainNavigation = () => {
 
     </NavWrapper>
   )
+  }
 };
 
-export default MainNavigation
+export default MainNavigation;

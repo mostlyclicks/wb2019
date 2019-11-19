@@ -31,6 +31,7 @@ const Logo = () => <img src={logo} alt="Wieser Brothers Inc. Logo" />
 const HeaderWrapper = styled.section`
   display:flex;
   flex-direction:row;
+  justify-content:flex-start;
   height:110px;
   margin:0 auto;
   margin-top: 0px;

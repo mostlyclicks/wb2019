@@ -11,7 +11,6 @@ const Wrapper = styled.div`
 `
 const StyledProjectHero = styled.div`
   display: flex;
-  border:1px solid red;
   justify-content:center;
   width: 100%;
   height:400px;
