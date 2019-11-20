@@ -4,40 +4,44 @@ import styled from "styled-components";
 import { screen } from './media-queries';
 import './base-styles.scss'
 
-
-// const lightGray = 'rgba(0,0,0,.03)';
-// const gray = 'rgba(0,0,0,.60)';
-
-const StyledNav = styled.nav`
-  background:rgba(0,0,0,.03);
-  height:46px;
+const StyledNav = styled.nav`  
+  background: rgba(0, 0, 0, 0.7);
+  height: 32px;
   ul {
-    list-style-type:none;
-    padding:0;
-    margin:0;
-    display:flex;
-    justify-content:center; 
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items:center;
   }
   a {
-    text-decoration:none;
-    color:rgba(0,0,0,.60);
-    display:block;
-    padding:10px 15px;
-    font-size:14px;
+    text-decoration: none;
+    color: #fe9314;
+    font-size: 11px;
+    font-weight: 700;
   }
   a:hover {
-    color:#fff;
-    transition:0.7s;
-    background-color:#00573c;
+    color: rgba(0, 0, 0, 0.7);
+    transition: 0.7s;
+    background-color: #fe9314;
   }
-  .secondary {
-    display:none;
+  .secondarys {
+    display: none;
   }
+
+  ${screen.phone`
+    ul {
+      display:flex;
+      justify-content:space-evenly;
+      li {padding-left:5px;padding-right:5px;}
+    }
+  `}
 
   ${screen.tablet`
     ul {
-      display:flex;
-      justify-content:center;
+      
     }
     span {
       display:flex;
@@ -45,6 +49,15 @@ const StyledNav = styled.nav`
     }
     .secondary {
       display:block;
+    }
+  `}
+
+  ${screen.desktopSmall`
+    ul {
+      display:flex;
+      justify-content:flex-end;
+      align-items:center;
+      li {padding:0 10px;}
     }
   `}
 `
