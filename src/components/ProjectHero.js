@@ -7,14 +7,15 @@ const Wrapper = styled.div`
   display: flex;
   flex-direction:row;
   justify-content:center;
+  align-items:center;
   margin-top:15px;
 `
 const StyledProjectHero = styled.div`
   display: flex;
   justify-content:center;
+  align-items:flex-end;
   width: 100%;
   height:400px;
-  
   background-image:
   linear-gradient(to bottom, rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0) 30%),
   url(${projectHero});
@@ -23,30 +24,36 @@ const StyledProjectHero = styled.div`
   background-repeat:no-repeat;
   
   .center-content {
-    width: 400px;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content:flex-end;
     font-family: Muli, sans-serif;
     color: #fff;
-    margin: auto;
+    padding:30px;
+    caption {text-shadow:0px 0px 15px rgba(0,0,0,.5);}
+    
   }
 
   ${screen.tablet`
     height:400px;
     margin-top:-125px;
     z-index:-1;
+    justify-content:center;
+    align-items:flex-end;
+
   `}
   ${screen.desktopSmall`
     width:100%;
     height:600px;
-    align-items:center;
-    justify-content:center;
     margin-top:-125px;
     z-index:-1;
+    justify-content:flex-end;
+    align-items:flex-end;
   `}
   ${screen.desktopLarge`
     width:100%;
     height:700px;
+    
     
   `}
 `
@@ -54,9 +61,9 @@ const ProjectHero = () => {
   return (
     <Wrapper>
       <StyledProjectHero>
-        <div className="center-content">
+        <span className="center-content">
           <caption>Organic Valley Headquarters<br />Cashton, WI</caption>
-        </div>
+        </span>
       </StyledProjectHero>
     </Wrapper>
   )
