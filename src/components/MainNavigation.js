@@ -40,7 +40,6 @@ const NavWrapper = styled.section`
 const NavBar = styled.nav`
   display:flex;
   align-items:center;
-       border:1px solid blue;
   ul {
     display:flex;
     flex-direction:row;
@@ -69,12 +68,10 @@ const NavBar = styled.nav`
 
    ${screen.tablet`
       li {font-size:10px;}
-           border:1px solid red;
   `}
 
   ${screen.desktopSmall`
       li {font-size:14px;}
-      border:1px solid green;
   `}
 
 `

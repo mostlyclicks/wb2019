@@ -14,9 +14,13 @@ const StyledProjectHero = styled.div`
   justify-content:center;
   width: 100%;
   height:400px;
-  background-image: url(${projectHero});
-  background-size: cover;
-  background-position: center;
+  
+  background-image:
+  linear-gradient(to bottom, rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0) 30%),
+  url(${projectHero});
+  background-size:cover;
+  background-position-y:0px;
+  background-repeat:no-repeat;
   
   .center-content {
     width: 400px;
@@ -29,16 +33,21 @@ const StyledProjectHero = styled.div`
 
   ${screen.tablet`
     height:400px;
+    margin-top:-125px;
+    z-index:-1;
   `}
   ${screen.desktopSmall`
-    width:991px;
-    height:500px;
+    width:100%;
+    height:600px;
     align-items:center;
     justify-content:center;
+    margin-top:-125px;
+    z-index:-1;
   `}
   ${screen.desktopLarge`
-    width:1199px;
-    height:600px;
+    width:100%;
+    height:700px;
+    
   `}
 `
 const ProjectHero = () => {
