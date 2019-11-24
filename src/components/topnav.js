@@ -5,7 +5,7 @@ import { screen } from './media-queries';
 import './base-styles.scss'
 
 const StyledNav = styled.nav`  
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, .8);
   height: 32px;
   ul {
     list-style-type: none;
@@ -18,9 +18,9 @@ const StyledNav = styled.nav`
   }
   a {
     text-decoration: none;
-    color: #fe9314;
+    color: #fefefe;
     font-size: 11px;
-    font-weight: 700;
+    font-weight: 400;
   }
   a:hover {
     color: rgba(0, 0, 0, 0.7);
@@ -40,6 +40,7 @@ const StyledNav = styled.nav`
   `}
 
   ${screen.tablet`
+  background: rgba(0, 0, 0, .6);
     ul {
       
     }

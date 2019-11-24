@@ -36,7 +36,7 @@ const StyledProjectHero = styled.div`
 
   ${screen.tablet`
     height:400px;
-    margin-top:-125px;
+    margin-top:-157px;
     z-index:-1;
     justify-content:center;
     align-items:flex-end;
@@ -45,7 +45,7 @@ const StyledProjectHero = styled.div`
   ${screen.desktopSmall`
     width:100%;
     height:600px;
-    margin-top:-125px;
+    margin-top:-157px;
     z-index:-1;
     justify-content:flex-end;
     align-items:flex-end;

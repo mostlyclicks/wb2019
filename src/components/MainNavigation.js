@@ -67,7 +67,7 @@ const NavBar = styled.nav`
   }
 
    ${screen.tablet`
-      li {font-size:10px;}
+      li {font-size:10.6px;}
   `}
 
   ${screen.desktopSmall`

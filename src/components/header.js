@@ -26,7 +26,13 @@ const TestDiv = styled.div`
   `};
 `
 
-const Logo = () => <img src={logo} alt="Wieser Brothers Inc. Logo" />
+// const Logo = () => <img src={logo} alt="Wieser Brothers Inc. Logo" />
+
+//  img {
+//     
+//   }
+
+
 
 const HeaderWrapper = styled.section`
   display:flex;
@@ -36,12 +42,7 @@ const HeaderWrapper = styled.section`
   margin:0 auto;
   margin-top: 0px;
   width: 100%;
-  img {
-    display: block;
-    width: 225px;
-    padding: 20px;
-    margin: 0 auto;
-  }
+ 
 
   ${screen.tablet`
     img {margin:12px 0 0 0;width:200px;padding:15px;}
@@ -55,12 +56,20 @@ const HeaderWrapper = styled.section`
   `}
 `
 
+const Logo = styled.img`
+  display: block;
+  width: 225px;
+  padding: 20px;
+  background-size:cover;
+  margin: 0px auto;
+`
+
 const Header = ({ siteTitle }) => (
   <div>
     {/*<TestDiv />*/}
     <TopNav />
     <HeaderWrapper>
-      <Logo />
+        <Logo src={logo}/>
       <MainNavigation />
     </HeaderWrapper>
   </div>
