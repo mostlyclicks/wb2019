@@ -8,7 +8,6 @@ import MainNavigation from './MainNavigation';
 // import { BaseStyle } from './base-styles'
 import { screen } from './media-queries';
 
-
 const TestDiv = styled.div`
   height: 0px;
   background-color: #cdcdcd;
@@ -26,19 +25,11 @@ const TestDiv = styled.div`
   `};
 `
 
-// const Logo = () => <img src={logo} alt="Wieser Brothers Inc. Logo" />
-
-//  img {
-//     
-//   }
-
-
-
 const HeaderWrapper = styled.section`
   display:flex;
   flex-direction:row;
   justify-content:flex-start;
-  height:110px;
+  height:auto;
   margin:0 auto;
   margin-top: 0px;
   width: 100%;
@@ -59,9 +50,24 @@ const HeaderWrapper = styled.section`
 const Logo = styled.img`
   display: block;
   width: 225px;
+  height: auto;
   padding: 20px;
-  background-size:cover;
-  margin: 0px auto;
+  margin: 0px auto 10px auto;
+
+  ${screen.phone`
+    width:230px;
+    height:auto
+  `}
+
+  ${screen.tablet`
+    width:200px ;
+    height:auto;
+  `}
+
+  ${screen.desktopSmall`
+    width:250px !important;
+    height:auto;
+  `}
 `
 
 const Header = ({ siteTitle }) => (

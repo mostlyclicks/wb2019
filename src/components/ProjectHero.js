@@ -8,7 +8,10 @@ const Wrapper = styled.div`
   flex-direction:row;
   justify-content:center;
   align-items:center;
-  margin-top:15px;
+  margin-top:-10px;
+  ${screen.tablet`
+    margin-top:15px;
+  `}
 `
 const StyledProjectHero = styled.div`
   display: flex;

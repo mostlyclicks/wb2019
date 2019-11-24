@@ -8,7 +8,7 @@ export const screen = {
 
   tablet: (...args) => {
     const styles = args
-    return `@media (min-width:769px){
+    return `@media (min-width:780px){
       ${styles};
     }`
   },
