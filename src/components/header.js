@@ -75,7 +75,7 @@ const Header = ({ siteTitle }) => (
     {/*<TestDiv />*/}
     <TopNav />
     <HeaderWrapper>
-        <Logo src={logo}/>
+        <Logo src={logo} alt="Wieser Brothers Logo"/>
       <MainNavigation />
     </HeaderWrapper>
   </div>
