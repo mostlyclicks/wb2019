@@ -1,8 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Link } from 'gatsby'
-import { screen } from "./media-queries"
-import gridBackground from '../images/hero_8918_background.jpg'
+import { screen } from "../media-queries"
+import gridBackground from '../../images/hero_8918_background.jpg'
 
 const GridSection = styled.section`
   width: 100%;
@@ -22,7 +22,7 @@ const GridContainerWrapper = styled.div`
 
 
   ${screen.tablet`
-    grid-template-columns:1fr 1fr;
+    grid-template-columns:1fr 1fr; 
     max-width:991px;
     margin:50px auto;
     grid-gap:20px;
