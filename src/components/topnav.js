@@ -21,6 +21,7 @@ const StyledNav = styled.nav`
     color: #fefefe;
     font-size: 11px;
     font-weight: 400;
+    padding:6px 4px;
   }
   a:hover {
     color: rgba(0, 0, 0, 0.7);
@@ -48,7 +49,7 @@ const StyledNav = styled.nav`
       display:flex;
       justify-content:flex-start;
     }
-    .secondary {
+    .secondarys {
       display:block;
     }
   `}
@@ -67,7 +68,7 @@ const TopNav = () => {
   return (
     <StyledNav>
       <ul>
-        <li><a href="tel:507-895-8903">507-895-8903</a></li>
+        <li><a href="tel:507-895-8903">507.895.8903</a></li>
         <li><Link to="/">Contact Us</Link></li>
         <li><Link to="/">Employment Opportunites</Link></li>
         <li><Link to="/" className="secondary">Submit Bids</Link></li>
