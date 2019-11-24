@@ -2,14 +2,24 @@ import React from 'react'
 import styled from 'styled-components'
 import { Link } from 'gatsby'
 import { screen } from "./media-queries"
+import gridBackground from '../images/hero_8918_background.jpg'
 
+const GridSection = styled.section`
+  width: 100%;
+  background-image: url(${gridBackground});
+  background-size:100%;
+  background-repeat:no-repeat;
+  background-color:#fefefe;
+`
 
 const GridContainerWrapper = styled.div`
   display: grid;
-  grid-template-columns:1fr;
+  grid-template-columns: 1fr;
   grid-gap: 10px;
-  margin:50px auto;
-  padding:20px;
+  margin: 50px auto;
+  padding: 20px;
+  
+
 
   ${screen.tablet`
     grid-template-columns:1fr 1fr;
@@ -23,7 +33,8 @@ const GridItem = styled.div`
   height: 400px;
   display: block;
   padding: 20px;
-  background-color: rgba(0, 0, 0, 0.03);
+  background-color: rgba(255,255,255,1);
+  box-shadow:0px 0px 8px rgba(0,0,0,.08);
   :nth-child(1) {
     order: 1;
     background-image: url("https://picsum.photos/800");
@@ -101,38 +112,41 @@ const GridBox = styled.div`
 
 const GridContainer = () => {
   return (
-    <GridContainerWrapper>
-      <GridItem>One</GridItem>
+    <GridSection>
+      <GridContainerWrapper>
+        <GridItem>One</GridItem>
+        <GridItem>
+          <GridBox>
+            <h1>
+              Trust
+              <br />
+              Partnership
+              <br />
+              Excellence
+            </h1>
+            <Link to="/">Learn more</Link>
+          </GridBox>
+        </GridItem>
 
-      <GridItem>
-        <GridBox>
-          <h1>Trust<br />
-          Partnership<br />
-          Excellence</h1>
-      
-          <Link to="/">Learn more</Link>
-      
-        </GridBox>
-      </GridItem>
+        <GridItem>
+          <GridBox>
+            <h1>News</h1>
+            <p>New ABC Company Expansions</p>
+            <Link to="/">Read more</Link>
+          </GridBox>
+        </GridItem>
 
-      <GridItem>
-        <GridBox>
-          <h1>News</h1>
-          <p>New ABC Company Expansions</p>
-          <Link to="/">Read more</Link>
-        </GridBox>
-      </GridItem>
-
-      <GridItem>Four</GridItem>
-      <GridItem>Five</GridItem>
-      <GridItem>
-        <GridBox>
-          <h1>Employment Opportunities</h1>
-          <p>See all of our job opportunities</p>
-          <Link to="/">Start here</Link>
-        </GridBox>
-      </GridItem>
-    </GridContainerWrapper>
+        <GridItem>Four</GridItem>
+        <GridItem>Five</GridItem>
+        <GridItem>
+          <GridBox>
+            <h1>Employment Opportunities</h1>
+            <p>See all of our job opportunities</p>
+            <Link to="/">Start here</Link>
+          </GridBox>
+        </GridItem>
+      </GridContainerWrapper>
+    </GridSection>
   )
 }
 
