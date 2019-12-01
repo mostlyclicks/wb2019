@@ -1,42 +1,43 @@
 import React from 'react'
 import styled from 'styled-components'
 
-const MissionSection = styled.section`
+const MissionVisionSection = styled.section`
   display:flex;
   flex-direction:row;
   justify-content:center;
   align-items:center;
-  height:100vh;
+  height:33vh;
   background-color:rgba(0,0,0,.65);
 `
-const MissionTextBox = styled.div`
+const TextBox = styled.div`
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
-  color: #fe9314;
+  align-items:flex-start;
+  color: #ffffff;
   width: 100%;
-  max-width: 400px;
+  max-width: 500px;
   h1 {
     font-family: "IBM Plex Serif";
   }
   p {
-    padding: 0 20px;
     color: #fefefe
   }
 `
 
 const Mission = () => {
   return (
-    <MissionSection>
-      <MissionTextBox>
+    <MissionVisionSection>
+      <TextBox>
         <h1>Mission</h1>
         <p>
           Deliver an exceptional construction experience built on integrity,
           partnership, and excellence, while caring for our employees,
           communities, and environment.
         </p>
-      </MissionTextBox>
-    </MissionSection>
+      </TextBox>
+
+    </MissionVisionSection>
   )
 }
 

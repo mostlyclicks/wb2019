@@ -1,11 +1,11 @@
-import { Link } from "gatsby"
+// import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
 import styled from "styled-components"
+
 import logo from "../images/logo.png"
 import TopNav from './topnav'
 import MainNavigation from './MainNavigation';
-// import { BaseStyle } from './base-styles'
 import { screen } from './media-queries';
 
 const TestDiv = styled.div`
@@ -72,7 +72,6 @@ const Logo = styled.img`
 
 const Header = ({ siteTitle }) => (
   <div>
-    {/*<TestDiv />*/}
     <TopNav />
     <HeaderWrapper>
         <Logo src={logo} alt="Wieser Brothers Logo"/>

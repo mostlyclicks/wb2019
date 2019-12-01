@@ -5,7 +5,7 @@ import Header from "./header"
 import MainNavigation from "./MainNavigation"
 // import Navigation from "./navigation"
 // import FooterNav from "./footer"
-import "./layout.css"
+import "./layout.scss"
 // import { BaseStyle } from "./base-styles"
 
 const Layout = ({ children, path }) => {
