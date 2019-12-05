@@ -98,9 +98,9 @@ const Footer = () => (
           <br />
           La Crescent, MN 55947
           <br />
-          507-895-8903
+          507.895.8903
           <br />
-          Fax: 507-895-8438
+          Fax: 507.895.8438
           <br />
           <a href="mailto:info@wieserbrothers.com">info@wieserbrothers.com</a>
         </p>

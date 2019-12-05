@@ -4,6 +4,11 @@ import { Link } from 'gatsby'
 import { screen } from "../media-queries"
 import gridBackground from '../../images/hero_8918_background.jpg'
 
+import block1 from '../../images/1JeffBrian2017.jpeg'
+import block2 from "../../images/IMG_2273_employment_page-web.jpeg"
+import block3 from "../../images/IMG_4870_MOD-2_w.jpeg"
+
+
 const GridSection = styled.section`
   width: 100%;
   background-image: url(${gridBackground});
@@ -35,10 +40,11 @@ const GridItem = styled.div`
   padding: 20px;
   background-color: rgba(255, 255, 255, 1);
   box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.08);
-  color:var(--orange);
+  color: var(--orange);
   :nth-child(1) {
     order: 1;
-    background-image: url("https://picsum.photos/800");
+    background-image: url(${block1});
+    background-size:cover;
   }
   :nth-child(2) {
     order: 2;
@@ -58,11 +64,11 @@ const GridItem = styled.div`
   }
   :nth-child(4) {
     order: 3;
-    background-image: url("https://picsum.photos/800");
+    background-image: url(${block2});
   }
   :nth-child(5) {
     order: 5;
-    background-image: url("https://picsum.photos/800");
+    background-image: url(${block3});
   }
   :nth-child(6) {
     order: 6;
@@ -121,7 +127,7 @@ const GridContainer = () => {
   return (
     <GridSection>
       <GridContainerWrapper>
-        <GridItem>One</GridItem>
+        <GridItem></GridItem>
         <GridItem>
           <GridBox>
             <h1>
@@ -143,8 +149,8 @@ const GridContainer = () => {
           </GridBox>
         </GridItem>
 
-        <GridItem>Four</GridItem>
-        <GridItem>Five</GridItem>
+        <GridItem></GridItem>
+        <GridItem></GridItem>
         <GridItem>
           <GridBox>
             <h1>Employment Opportunities</h1>
