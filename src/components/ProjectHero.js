@@ -19,9 +19,7 @@ const StyledProjectHero = styled.div`
   align-items:flex-end;
   width: 100%;
   height:400px;
-  background-image:
-  linear-gradient(to bottom, rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0) 30%),
-  url(${projectHero});
+  background-image:linear-gradient(to bottom, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0) 50%),url(${projectHero});
   background-size:cover;
   background-position-y:0px;
   background-repeat:no-repeat;
@@ -37,9 +35,13 @@ const StyledProjectHero = styled.div`
     
   }
 
+  ${screen.phone` 
+ 
+  `}
+
   ${screen.tablet`
     height:400px;
-    margin-top:-157px;
+    margin-top:-167px;
     z-index:-1;
     justify-content:center;
     align-items:flex-end;
@@ -48,16 +50,15 @@ const StyledProjectHero = styled.div`
   ${screen.desktopSmall`
     width:100%;
     height:600px;
-    margin-top:-157px;
+    margin-top:-187px;
     z-index:-1;
     justify-content:flex-end;
     align-items:flex-end;
+    
   `}
   ${screen.desktopLarge`
     width:100%;
     height:700px;
-    
-    
   `}
 `
 const ProjectHero = () => {

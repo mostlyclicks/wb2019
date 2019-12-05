@@ -4,16 +4,37 @@ html {
   -webkit-text-size-adjust: 100%;
 }
 
-:root {
-  --wbGreenDark:#00573c;
-}
-
-
 body {
   margin: 0;
+  padding:0;
+  box-sizing:border-box;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+.responsive {
+  width:100%;
+  height:auto;
+}
+
+:root {
+  --mainNavLinks:#ffffff;
+  --wbGreenDark:#00573c;
+  --orange:#fe9314;
+  --darkGray:rgba(0, 0, 0, .8);;
+}
+
+// $headerGray: rgba(0,0,0,.65);
+// $lightGray:rgba(0,0,0,.03);
+// $gray:rgba(0,0,0,.60);
+// $wb-green:#00573c;
+// $wb-green-light:#bccfc9;
+// $orange:#fe9314;
+
+
+
+/*
+
 article,
 aside,
 details,
@@ -626,3 +647,4 @@ pre tt:after {
     font-size: 100%;
   }
 }
+*/

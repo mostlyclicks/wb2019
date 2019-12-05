@@ -19,10 +19,6 @@ const IndexPage = () => (
       <ProjectHero />
       <GridContainer />
       <Mission />
-
-      
-
-
     </div>
   </Layout>
 )

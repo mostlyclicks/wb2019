@@ -2,10 +2,11 @@ import React from 'react';
 import { Link } from 'gatsby';
 import styled from "styled-components";
 import { screen } from './media-queries';
-import './base-styles.scss'
 
 const StyledNav = styled.nav`  
-  background: rgba(0, 0, 0, .8);
+  display:flex;
+  justify-content:space-around;
+  background: var(--darkGray);
   height: 32px;
   ul {
     list-style-type: none;
@@ -21,12 +22,12 @@ const StyledNav = styled.nav`
     color: #fefefe;
     font-size: 11px;
     font-weight: 400;
-    padding:6px 4px;
+    padding:8px 4px;
   }
   a:hover {
     color: rgba(0, 0, 0, 0.7);
     transition: 0.7s;
-    background-color: #fe9314;
+    background-color: var(--orange);
   }
   .secondarys {
     display: none;
@@ -42,6 +43,7 @@ const StyledNav = styled.nav`
 
   ${screen.tablet`
   background: rgba(0, 0, 0, .6);
+  justify-content:flex-end;
     ul {
       
     }

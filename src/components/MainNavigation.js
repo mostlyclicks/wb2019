@@ -1,10 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Link } from 'gatsby'
-import { screen } from './media-queries';
-// import { Link } from '@reach/router';
-
-
+import { screen } from './media-queries'; 
 
 const NavWrapper = styled.section`
   display:none;
@@ -52,6 +49,7 @@ const NavBar = styled.nav`
     font-size:14px;
   }
   a {
+    color: var(--mainNavLinks);
     display:block;
     padding:7px 8px;
     margin:0;
@@ -62,12 +60,12 @@ const NavBar = styled.nav`
     transition:.5s;
     &:hover {
       background-color:rgba(0,0,0,.4);
-      color:#fff;
+      color:var(--orange);
     }
   }
 
    ${screen.tablet`
-      li {font-size:10.6px;}
+      li {font-size:11px;}
   `}
 
   ${screen.desktopSmall`
@@ -80,7 +78,6 @@ const Hamburger = styled.span`
   display:none;
 `
 
-// const MainNavigation = () => {
 class MainNavigation extends React.Component {
 
   toggleMenu() {

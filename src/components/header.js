@@ -1,4 +1,3 @@
-// import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
 import styled from "styled-components"
@@ -7,23 +6,6 @@ import logo from "../images/logo.png"
 import TopNav from './topnav'
 import MainNavigation from './MainNavigation';
 import { screen } from './media-queries';
-
-const TestDiv = styled.div`
-  height: 0px;
-  background-color: #cdcdcd;
-  ${screen.phone`
-    background-color:orange;
-  `};
-  ${screen.tablet`
-    background-color:pink;
-  `};
-  ${screen.desktopSmall`
-    background-color:crimson;
-  `};
-  ${screen.desktopLarge`
-    background-color:blue;
-  `};
-`
 
 const HeaderWrapper = styled.section`
   display:flex;
@@ -34,7 +16,6 @@ const HeaderWrapper = styled.section`
   margin-top: 0px;
   width: 100%;
  
-
   ${screen.tablet`
     img {margin:12px 0 0 0;width:200px;padding:15px;}
   `};
@@ -49,23 +30,23 @@ const HeaderWrapper = styled.section`
 
 const Logo = styled.img`
   display: block;
-  width: 225px;
+  width: 150px;
   height: auto;
   padding: 20px;
   margin: 0px auto 10px auto;
 
   ${screen.phone`
-    width:230px;
+    width:150px;
     height:auto
   `}
 
   ${screen.tablet`
-    width:200px ;
+    width:150px !important;
     height:auto;
   `}
 
   ${screen.desktopSmall`
-    width:250px !important;
+    width:150px !important;
     height:auto;
   `}
 `
@@ -74,7 +55,7 @@ const Header = ({ siteTitle }) => (
   <div>
     <TopNav />
     <HeaderWrapper>
-        <Logo src={logo} alt="Wieser Brothers Logo"/>
+        <Logo src={logo} alt="Wieser Brothers Logo" className="responsive"/>
       <MainNavigation />
     </HeaderWrapper>
   </div>

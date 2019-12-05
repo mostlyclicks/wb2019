@@ -33,8 +33,9 @@ const GridItem = styled.div`
   height: 400px;
   display: block;
   padding: 20px;
-  background-color: rgba(255,255,255,1);
-  box-shadow:0px 0px 8px rgba(0,0,0,.08);
+  background-color: rgba(255, 255, 255, 1);
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.08);
+  color:var(--orange);
   :nth-child(1) {
     order: 1;
     background-image: url("https://picsum.photos/800");
@@ -45,6 +46,7 @@ const GridItem = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    background-color: var(--darkGray);
   }
   :nth-child(3) {
     order: 4;
@@ -52,6 +54,7 @@ const GridItem = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    background-color: var(--darkGray);
   }
   :nth-child(4) {
     order: 3;
@@ -67,6 +70,7 @@ const GridItem = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    background-color: var(--darkGray);
   }
 
   ${screen.tablet`
@@ -94,15 +98,18 @@ const GridBox = styled.div`
     font-family: "IBM Plex Serif";
   }
   a {
-    color: #fe9314;
+    color: #fff;
     text-transform:uppercase;
     font-size:18px;
     font-weight:bold;
     text-decoration:none;
     font-family:'Open Sans';
     transition:.5s;
+    
+    border:1px solid #fff;
+    padding:5px 20px;
     :hover {
-      color:black;
+      color:var(--orange);
     }
   }
 `
