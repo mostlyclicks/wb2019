@@ -58,7 +58,7 @@ const StyledProjectHero = styled.div`
   `}
   ${screen.desktopLarge`
     width:100%;
-    height:700px;
+    height:90vh;
   `}
 `
 const ProjectHero = () => {
