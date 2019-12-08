@@ -12,7 +12,9 @@ const LevelTwo = () => (
       <ProjectHero />
       <h1>Level 2</h1>
       <p>body</p>
-      
+
+
+      <Mission />
     </div>
   </Layout>
 )
