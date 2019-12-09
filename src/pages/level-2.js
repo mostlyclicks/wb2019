@@ -2,7 +2,6 @@ import React from 'react'
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import ProjectHero from "../components/L2Hero"
-import Mission from "../components/Mission"
 
 
 const LevelTwo = () => (
