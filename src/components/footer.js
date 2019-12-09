@@ -2,23 +2,29 @@ import React from "react"
 // import { Link } from "gatsby"
 
 import styled from "styled-components"
+import Mission from "./Mission"
 import { screen } from "./media-queries"
 import { FaFacebook, FaLinkedin, FaYoutube, FaInstagram } from "react-icons/fa"
 
 
 
 const FooterSection = styled.section`
+  margin-top:auto;
   background-color: var(--darkGray);
-  padding: 50px;
+  
 `
 
 const FooterContainer = styled.div`
+  padding: 50px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   margin: 0px auto;
   color: #fff;
-  p {margin:0;line-height:1.5rem;}
+  p {
+    margin: 0;
+    line-height: 1.5rem;
+  }
   a {
     color: var(--orange);
   }
@@ -29,8 +35,8 @@ const FooterContainer = styled.div`
     ul {
       margin: 0;
       padding: 0;
-      font-size:1rem;
-      line-height:1.5rem;
+      font-size: 1rem;
+      line-height: 1.5rem;
       li {
         list-style-type: none;
       }
@@ -42,7 +48,7 @@ const FooterContainer = styled.div`
     flex-direction: column;
 
     ul {
-      margin-top:1rem;
+      margin-top: 1rem;
       width: 50%;
       font-size: 2rem;
       display: flex;
@@ -66,6 +72,7 @@ const FooterContainer = styled.div`
 
 const Footer = () => (
   <FooterSection>
+    <Mission />
     <FooterContainer>
       <div>
         <ul>

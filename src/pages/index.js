@@ -6,7 +6,7 @@ import Image from "../components/image"
 import SEO from "../components/seo"
 import ProjectHero from "../components/ProjectHero"
 import GridContainer from "../components/Home/GridContainer"
-import Mission from "../components/Home/Mission"
+import Mission from "../components/Mission"
 
 
 

@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
-import bgImg from "../../images/istockphoto-812099500.jpg"
-import { screen } from "../media-queries"
+import bgImg from "../images/istockphoto-812099500.jpg"
+import { screen } from "./media-queries"
 
 const MissionVisionSection = styled.section`
   display: flex;
@@ -9,6 +9,7 @@ const MissionVisionSection = styled.section`
   justify-content: center;
   align-items: center;
   height: 50vh;
+  margin-top:auto;
   
 
   background-image: 
